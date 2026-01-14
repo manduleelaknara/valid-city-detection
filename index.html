@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Valid City Detection</title>
+    <title>Weather SaaS App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-    <h2>Valid City Detection</h2>
+    <h2>Weather Checker </h2>
 
-    <form action="check_city.php" method="POST">
-        <input type="text" name="city" placeholder="Enter city name" required>
-        <button type="submit">Check City</button>
-    </form>
+    <input type="text" id="cityInput" placeholder="Enter city name">
+    <button onclick="getWeather()">Check Weather</button>
+
+    <div id="result"></div>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
+
