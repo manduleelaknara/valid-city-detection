@@ -8,5 +8,6 @@ The system shall provide a simple and user-friendly interface to allow users to 
 Group Members
      1. Mandulee Laknara Jayathunga - ITBIN-2312-0018
      2. Krishni Samarawickrama - ITBIN-2312-0026
-     3. Thathsarani Navodya - ITBIN-2312-0023
+     3.Thathsarani navodya-ITBIN-2312-0023
+
 
