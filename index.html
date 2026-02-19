@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
     <meta charset="UTF-8">
     <title>Weather SaaS App</title>
     <link rel="stylesheet" href="style.css">
@@ -20,3 +21,162 @@
 </body>
 </html>
 
+=======
+<meta charset="UTF-8">
+<title>City Validation App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.card {
+    background: #fff;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #667eea;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+}
+
+#result {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    display: none;
+}
+
+.success {
+    background: #e6fffa;
+    color: #065f46;
+    border: 1px solid #34d399;
+}
+
+.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #f87171;
+}
+
+footer {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #999;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>🌍 City Validation</h2>
+    <p>Check if a city exists anywhere in the world</p>
+
+    <input type="text" id="city" placeholder="Enter city name">
+
+    <button onclick="checkCity()">Check City</button>
+
+    <div id="result"></div>
+
+    <footer>Powered by OpenStreetMap</footer>
+</div>
+
+<script>
+async function checkCity() {
+    const city = document.getElementById("city").value.trim();
+    const result = document.getElementById("result");
+
+    if (!city) {
+        result.style.display = "block";
+        result.className = "error";
+        result.innerHTML = "❗ Please enter a city name";
+        return;
+    }
+
+    const url = `https://nominatim.openstreetmap.org/search?city=${encodeURIComponent(city)}&format=json`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        result.style.display = "block";
+
+        if (data.length > 0) {
+            result.className = "success";
+            result.innerHTML = `
+                ✅ <b>Valid city found!</b><br>
+                📍 ${data[0].display_name}
+            `;
+        } else {
+            result.className = "error";
+            result.innerHTML = "❌ City not found";
+        }
+    } catch (error) {
+        result.style.display = "block";
+        result.className = "error";
+        result.innerHTML = "⚠ Something went wrong";
+        console.error(error);
+    }
+}
+</script>
+
+</body>
+</html>
+>>>>>>> cfc088289d1cdc20c13f13c028c326962d4b9e93
