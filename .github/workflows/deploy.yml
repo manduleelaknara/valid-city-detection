@@ -16,18 +16,18 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@f1a4918e09d2ae60fa62fef01043d87afaf61302
+        uses: actions/checkout@v3
 
       - name: Setup GitHub Pages
-        uses: actions/configure-pages@f1a4918e09d2ae60fa62fef01043d87afaf61302
+        uses: actions/configure-pages@v3
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@f1a4918e09d2ae60fa62fef01043d87afaf61302
+        uses: actions/upload-pages-artifact@v1
         with:
           path: ./bin/Release/net8.0/publish
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@f1a4918e09d2ae60fa62fef01043d87afaf61302
+        uses: actions/deploy-pages@v1
 
 
 
