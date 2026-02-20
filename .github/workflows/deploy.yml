@@ -1,35 +1,33 @@
-name: Deploy City Validation App
+name: Deploy Static Website
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          dotnet-version: '8'
-
-      - name: Run unit tests
-        run: dotnet test
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: web-files
-          path: |
-            index.html
-            style.css
-            script.js
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+         
 
 
 
