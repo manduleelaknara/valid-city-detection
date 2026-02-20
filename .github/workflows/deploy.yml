@@ -15,23 +15,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout repository using pinned SHA
       - name: Checkout repository
-        uses: actions/checkout@085457012eb1468869d69168386114eefce25949
+        uses: actions/checkout@f1a4918e09d2ae60fa62fef01043d87afaf61302
 
-      # Configure GitHub Pages using pinned SHA
       - name: Setup GitHub Pages
-        uses: actions/configure-pages@085457012eb1468869d69168386114eefce25949
+        uses: actions/configure-pages@f1a4918e09d2ae60fa62fef01043d87afaf61302
 
-      # Upload artifact for deployment using pinned SHA
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@085457012eb1468869d69168386114eefce25949
+        uses: actions/upload-pages-artifact@f1a4918e09d2ae60fa62fef01043d87afaf61302
         with:
           path: ./bin/Release/net8.0/publish
 
-      # Deploy to GitHub Pages using pinned SHA
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@085457012eb1468869d69168386114eefce25949
+        uses: actions/deploy-pages@f1a4918e09d2ae60fa62fef01043d87afaf61302
+
+
 
 
 
