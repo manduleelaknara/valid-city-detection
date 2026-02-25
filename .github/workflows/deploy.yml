@@ -16,15 +16,16 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
       - name: Setup GitHub Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b
 
       - name: Upload site files
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dee4629d6d91
         with:
           path: .
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ad5ac868bb359c09556ae4732103f73
+
