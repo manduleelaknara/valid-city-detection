@@ -1,0 +1,12 @@
+# Git folders
+.git
+.gitignore
+
+# Docker configuration files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# OS and system files
+.DS_Store
+Thumbs.db
