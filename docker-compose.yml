@@ -1,15 +1,9 @@
 version: '3.8'
 
 services:
-  city-validator:
+  web:
     build: .
-    container_name: city_app_container
+    container_name: valid-city-detection
     ports:
       - "8080:80"
-    networks:
-      - app-network
-    restart: always
-
-networks:
-  app-network:
-    driver: bridge
+    restart: unless-stopped

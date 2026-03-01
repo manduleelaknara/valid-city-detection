@@ -1,12 +1,20 @@
-# Git folders
+# Version control
 .git
 .gitignore
 
-# Docker configuration files
-Dockerfile
-docker-compose.yml
-.dockerignore
+# VS Code settings
+.vscode
 
-# OS and system files
+# GitHub workflows
+.github
+
+# Documentation
+README.md
+readme
+project001.txt
+CNAME
+
+# OS files
 .DS_Store
 Thumbs.db
+*.log
