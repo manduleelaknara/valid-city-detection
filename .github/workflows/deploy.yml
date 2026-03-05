@@ -2,7 +2,7 @@ name: Deploy Static Website
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "mandulee"]
 
 permissions:
   contents: read
@@ -28,6 +28,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
          
+
 
 
 
