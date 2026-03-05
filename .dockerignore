@@ -1,3 +1,25 @@
+<<<<<<< mandulee
+# Version control
+.git
+.gitignore
+
+# VS Code settings
+.vscode
+
+# GitHub workflows
+.github
+
+# Documentation
+README.md
+readme
+project001.txt
+CNAME
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+=======
 node_modules
 dist
 build
@@ -9,3 +31,4 @@ docker-compose.yml
 Dockerfile
 .dockerignore
 npm-debug.log
+>>>>>>> main
