@@ -1,3 +1,4 @@
+<<<<<<< mandulee
 # Version control
 .git
 .gitignore
@@ -18,3 +19,16 @@ CNAME
 .DS_Store
 Thumbs.db
 *.log
+=======
+node_modules
+dist
+build
+.git
+.gitignore
+.env
+README.md
+docker-compose.yml
+Dockerfile
+.dockerignore
+npm-debug.log
+>>>>>>> main
