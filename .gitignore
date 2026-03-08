@@ -1,0 +1,23 @@
+# API keys and environment files
+.env
+
+# Node modules (if project later uses npm)
+node_modules/
+
+# Log files
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Temporary files
+temp/
+tmp/
+
+# OS generated files
+desktop.ini
